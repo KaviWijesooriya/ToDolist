@@ -1,0 +1,192 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the entire app */
+.container {
+  width: 100%;
+  max-width: 700px;
+  background: #1e1e1e; /* Slightly lighter than the background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Deeper shadow for depth */
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Heading styles */
+h2 {
+  color: #ffffff; /* White text for headers */
+}
+
+/* Styling for the input row with text input and buttons */
+.row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="time"], select {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 5px;
+  border: 2px solid #333; /* Darker border */
+  border-radius: 5px;
+  background-color: #333; /* Dark input backgrounds */
+  color: #ffffff; /* White text for inputs */
+  font-size: 16px;
+}
+
+input[type="text"] {
+  flex-grow: 2;
+}
+
+select {
+  max-width: 100px; /* Limit width of the dropdown */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff; /* Bright color for contrast */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darken on hover */
+}
+
+/* Styles for the list of tasks */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  background: #333; /* Dark list items for contrast */
+  border: 1px solid #444; /* Slightly lighter border for visibility */
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #454545; /* Lighten on hover for feedback */
+}
+
+/* Styling for tasks that are checked off */
+.task-raw div .checked {
+  text-decoration: line-through;
+  color: #777; /* Grayed out for checked tasks */
+}
+
+/* Close button for deleting tasks */
+span.close {
+  color: #ff6347; /* Tomato color for visibility and contrast */
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.task-table {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: table;
+  width: 100%;
+}
+
+.task-table li {
+  display: table-row;
+  background: #333;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.task-table li > div, .task-table li > button {
+  display: table-cell;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.task-table li > div {
+  border-bottom: 1px solid #444;
+}
+
+.task-table li > button {
+  background-color: transparent;
+  color: #ff6347;
+  border: none;
+  cursor: pointer;
+}
+
+.task-table li > button:hover {
+  background-color: #454545;
+}
+
+.task-table li.checked > div {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .container {
+      margin: 10px;
+      width: 95%;
+  }
+
+  input[type="date"], input[type="time"], select {
+      flex-basis: 100%;
+      margin-top: 5px;
+      margin-right: 0;
+  }
+
+  button {
+      flex-basis: 100%;
+      margin-top: 5px;
+  }
+
+  li > div {
+      display: block;
+      padding: 10px;
+  }
+
+  li > button {
+      display: block;
+      padding: 10px;
+      margin-top: 5px;
+  }
+
+  li > div {
+      border-bottom: none;
+  }
+
+  .task-table li > div {
+      border-bottom: none;
+  }
+
+  .task-table li > button {
+      display: block;
+      padding: 10px;
+      margin-top: 5px;
+  }
+
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>To-Do List</h2>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task">
+            <input type="date" id="date-picker">
+            <input type="time" id="time-picker">
+            <select id="priority-select">
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="list-container" class="task-table"></ul>
+    </div>
+    <script src="./MVC/controller.js"></script>
+    <script src="./MVC/model.js"></script>
+    <script src="./MVC/view.js"></script>
+</body>
+</html>
